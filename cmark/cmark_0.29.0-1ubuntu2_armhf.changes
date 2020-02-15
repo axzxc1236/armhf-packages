@@ -1,0 +1,40 @@
+Format: 1.8
+Date: Fri, 14 Feb 2020 18:37:23 +0100
+Source: cmark
+Binary: cmark libcmark0.29.0 libcmark-dev
+Architecture: armhf
+Version: 0.29.0-1ubuntu2
+Distribution: focal
+Urgency: medium
+Maintainer: Jonas Smedegaard <dr@jones.dk>
+Changed-By: Gianfranco Costamagna <locutusofborg@debian.org>
+Description:
+ cmark      - CommonMark parsing and rendering program
+ libcmark-dev - development files for CommonMark parsing and rendering library
+ libcmark0.29.0 - CommonMark parsing and rendering library
+Changes:
+ cmark (0.29.0-1ubuntu2) focal; urgency=medium
+ .
+   * debian/patches/68c3a91166347a32a57fb81223750a63cfd92105.patch:
+     - Don't use deprecated cgi in tests. (use upstream cherry-pick)
+Checksums-Sha1:
+ f6a51cb39120923d76649dd79159607d872d130f 163596 cmark-dbgsym_0.29.0-1ubuntu2_armhf.ddeb
+ 995238d4fef5ee4dec6886bc8c1e84f75cc30cc3 8385 cmark_0.29.0-1ubuntu2_armhf.buildinfo
+ af3c7acd435986e77c2d8803d9acbef1c97327c7 80236 cmark_0.29.0-1ubuntu2_armhf.deb
+ f8cc1ffedc1b91c550de53228457df5dc39174f5 96368 libcmark-dev_0.29.0-1ubuntu2_armhf.deb
+ 1a7edd11a647b2c34fe9c2170bbc7ebef273b942 159620 libcmark0.29.0-dbgsym_0.29.0-1ubuntu2_armhf.ddeb
+ 9340dd9e4b04effd8131639f313bb300255a74de 78712 libcmark0.29.0_0.29.0-1ubuntu2_armhf.deb
+Checksums-Sha256:
+ 42bf3d196cd37cb58458b2a6031253d10a88acaf8cf509fd8cdb244f2c7d7ea6 163596 cmark-dbgsym_0.29.0-1ubuntu2_armhf.ddeb
+ 7f8839b71d88046937ef477b690354b0171489f522a4d27c0eac0a2ab1042943 8385 cmark_0.29.0-1ubuntu2_armhf.buildinfo
+ 9f886083e813ffa1dc3d3e90a996acaee79b490490fd509f18fd35163a498f4c 80236 cmark_0.29.0-1ubuntu2_armhf.deb
+ c291a298bb2b544672bb1941ee8f9899641cb9780d276429945c0ed84262a4ba 96368 libcmark-dev_0.29.0-1ubuntu2_armhf.deb
+ 83c344b8fe788d296ff037254a130b6cc757345f9a00c959ef0a80e4f88a4748 159620 libcmark0.29.0-dbgsym_0.29.0-1ubuntu2_armhf.ddeb
+ 5b163ac31d705ef8f9ae2628fe5e80e43959e8b0c229e36ec345f6877cc1d156 78712 libcmark0.29.0_0.29.0-1ubuntu2_armhf.deb
+Files:
+ fb5de6d5b5e2ee4ece7bd597e582b2d5 163596 debug optional cmark-dbgsym_0.29.0-1ubuntu2_armhf.ddeb
+ e4482e4b5eb326861f3f093b3398cebf 8385 text optional cmark_0.29.0-1ubuntu2_armhf.buildinfo
+ ac23a3e4a7bbe3fa4abae83a0b66da4a 80236 text optional cmark_0.29.0-1ubuntu2_armhf.deb
+ 9325b363bc11c4c20cec2f41610cd80d 96368 libdevel optional libcmark-dev_0.29.0-1ubuntu2_armhf.deb
+ 01f0915450633c5b122e2bbd9e4b1149 159620 debug optional libcmark0.29.0-dbgsym_0.29.0-1ubuntu2_armhf.ddeb
+ 0e107c908413c0b2cecf5b84993afbb4 78712 libs optional libcmark0.29.0_0.29.0-1ubuntu2_armhf.deb

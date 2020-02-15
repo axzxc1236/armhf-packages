@@ -1,0 +1,32 @@
+Format: 1.8
+Date: Sat, 15 Feb 2020 21:03:00 +0000
+Source: filezilla
+Binary: filezilla filezilla-common
+Architecture: all armhf
+Version: 3.46.3-1build2
+Distribution: bionic
+Urgency: medium
+Maintainer: Adrien Cunin <adri2000@ubuntu.com>
+Changed-By: axzxc1236 <axzxc1236@email.email>
+Description:
+ filezilla  - Full-featured graphical FTP/FTPS/SFTP client
+ filezilla-common - Architecture independent files for filezilla
+Changes:
+ filezilla (3.46.3-1build2) bionic; urgency=medium
+ .
+   * Modified debian files to compile on Ubuntu 18.04
+Checksums-Sha1:
+ afeae2ce6b3ebaaf77345a972c5149916ba571a2 2305592 filezilla-common_3.46.3-1build2_all.deb
+ 96c72a2fd5f2211ada5750754a91f6d179206f27 38971460 filezilla-dbgsym_3.46.3-1build2_armhf.ddeb
+ a57461fba1453efda2632a85ce2ea9d72187b456 16159 filezilla_3.46.3-1build2_armhf.buildinfo
+ c50e440d39bb7f3842298c60cc652c3a561abec5 1595628 filezilla_3.46.3-1build2_armhf.deb
+Checksums-Sha256:
+ d2073ba0ae2e479c85098c80e5c49ecd90f38a2b74a9882613f43a4ec79965a7 2305592 filezilla-common_3.46.3-1build2_all.deb
+ 5e12f25a584862ad9a8697fe8001ffe4ddfb03e56678001cad0bf5ddacd29376 38971460 filezilla-dbgsym_3.46.3-1build2_armhf.ddeb
+ 7d4f0a4aebd9141946ad890cf2cdf37310e648e6db2993f6ff7151d971f99281 16159 filezilla_3.46.3-1build2_armhf.buildinfo
+ 9eb6ee0c8c4ced074ec557e462a022fd0404e36c98515d1f2a1e494c7cc38b85 1595628 filezilla_3.46.3-1build2_armhf.deb
+Files:
+ c9d027092768518b8abebecd5cddf6d7 2305592 net optional filezilla-common_3.46.3-1build2_all.deb
+ 26694695042ba59d6e42444412881377 38971460 debug optional filezilla-dbgsym_3.46.3-1build2_armhf.ddeb
+ 8edf653f308540ffe41be1201090f06f 16159 net optional filezilla_3.46.3-1build2_armhf.buildinfo
+ 303fa299cfff104b8428706272eae3ca 1595628 net optional filezilla_3.46.3-1build2_armhf.deb

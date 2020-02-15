@@ -1,0 +1,32 @@
+Format: 1.8
+Date: Sat, 15 Feb 2020 20:45:00 +0000
+Source: libfilezilla
+Binary: libfilezilla-dev libfilezilla0
+Architecture: armhf
+Version: 0.19.3-1build2
+Distribution: bionic
+Urgency: medium
+Maintainer: Adrien Cunin <adri2000@ubuntu.com>
+Changed-By: axzxc1236 <axzxc1236@email.email>
+Description:
+ libfilezilla-dev - build high-performing platform-independent programs (development)
+ libfilezilla0 - build high-performing platform-independent programs (runtime lib)
+Changes:
+ libfilezilla (0.19.3-1build2) bionic; urgency=medium
+ .
+   * Modified debian files to compile on Ubuntu 18.04
+Checksums-Sha1:
+ 7711504f55fe37226680369d40b672636aedd4a7 200840 libfilezilla-dev_0.19.3-1build2_armhf.deb
+ 50c471c5fb5a02c81ff8a9466c9127593b51bd91 1975304 libfilezilla0-dbgsym_0.19.3-1build2_armhf.ddeb
+ 181beb1693752b7635a8af71fb9bf7f8176d8dce 180540 libfilezilla0_0.19.3-1build2_armhf.deb
+ b9b2cde90aff731ae573b2193e8f7dd4fe341804 6685 libfilezilla_0.19.3-1build2_armhf.buildinfo
+Checksums-Sha256:
+ 7d7c1f33ea1fef4ccaa247c67d97ed0dd9538d55e1b07b7edcc77310ab0655fb 200840 libfilezilla-dev_0.19.3-1build2_armhf.deb
+ 07bef84cc9aac9e2ed55848f181b7aab95334c9ee64598f670be37b599f26d01 1975304 libfilezilla0-dbgsym_0.19.3-1build2_armhf.ddeb
+ d57fe6b2c6f9c8835daa40f73b7d7e3760e810a7daf955d32d055091d101366b 180540 libfilezilla0_0.19.3-1build2_armhf.deb
+ 40c82213e1e44b1e76e07d02eb9e053c3af660563720cfce128580a82cf8d1b4 6685 libfilezilla_0.19.3-1build2_armhf.buildinfo
+Files:
+ 4d7a6bfd539692c3a15f69dc9607f297 200840 libdevel optional libfilezilla-dev_0.19.3-1build2_armhf.deb
+ 10a9d7d877e0e7266e8fccc118a2ee34 1975304 debug optional libfilezilla0-dbgsym_0.19.3-1build2_armhf.ddeb
+ ada14bf36eb94b3ff26b82b885ea9a73 180540 libs optional libfilezilla0_0.19.3-1build2_armhf.deb
+ 2772e6048b23b27039d48ceda770b3cf 6685 libs optional libfilezilla_0.19.3-1build2_armhf.buildinfo

@@ -1,0 +1,420 @@
+dpkg-buildpackage: 資訊: 源碼套件 cmark
+dpkg-buildpackage: 資訊: 源碼版本 0.29.0-1ubuntu2
+dpkg-buildpackage: 資訊: source distribution focal
+dpkg-buildpackage: 資訊: 源碼變更者： Gianfranco Costamagna <locutusofborg@debian.org>
+dpkg-buildpackage: 資訊: 主機架構 armhf
+dpkg-source: 資訊: using options from cmark/debian/source/options: --extend-diff-ignore=__pycache__
+dh clean --buildsystem=cmake
+   dh_auto_clean -O--buildsystem=cmake
+   dh_clean -O--buildsystem=cmake
+dh binary --buildsystem=cmake
+   dh_update_autotools_config -O--buildsystem=cmake
+   dh_autoreconf -O--buildsystem=cmake
+   dh_auto_configure -O--buildsystem=cmake
+	cd obj-arm-linux-gnueabihf && cmake .. -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_VERBOSE_MAKEFILE=ON -DCMAKE_BUILD_TYPE=None -DCMAKE_INSTALL_SYSCONFDIR=/etc -DCMAKE_INSTALL_LOCALSTATEDIR=/var -DCMAKE_EXPORT_NO_PACKAGE_REGISTRY=ON -DCMAKE_FIND_PACKAGE_NO_PACKAGE_REGISTRY=ON -DCMAKE_INSTALL_RUNSTATEDIR=/run
+-- The C compiler identification is GNU 7.4.0
+-- The CXX compiler identification is GNU 7.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Performing Test HAVE_FLAG_ADDRESS_SANITIZER
+-- Performing Test HAVE_FLAG_ADDRESS_SANITIZER - Failed
+-- Performing Test HAVE_FLAG_SANITIZE_ADDRESS
+-- Performing Test HAVE_FLAG_SANITIZE_ADDRESS - Success
+-- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY
+-- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY - Success
+-- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY
+-- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY - Success
+-- Performing Test COMPILER_HAS_DEPRECATED_ATTR
+-- Performing Test COMPILER_HAS_DEPRECATED_ATTR - Success
+-- Looking for stdbool.h
+-- Looking for stdbool.h - found
+-- Performing Test HAVE___BUILTIN_EXPECT
+-- Performing Test HAVE___BUILTIN_EXPECT - Success
+-- Performing Test HAVE___ATTRIBUTE__
+-- Performing Test HAVE___ATTRIBUTE__ - Success
+-- Found PythonInterp: /home/linuxbrew/.linuxbrew/bin/python3 (found suitable version "3.7.6", minimum required is "3") 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/control/mount/test/cmark/obj-arm-linux-gnueabihf
+   dh_auto_build -O--buildsystem=cmake
+	cd obj-arm-linux-gnueabihf && make -j4 -O
+make[1]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+/usr/bin/cmake -H/home/control/mount/test/cmark -B/home/control/mount/test/cmark/obj-arm-linux-gnueabihf --check-build-system CMakeFiles/Makefile.cmake 0
+make[1]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[1]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+/usr/bin/cmake -E cmake_progress_start /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/CMakeFiles /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/CMakeFiles/progress.marks
+make[1]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make -f CMakeFiles/Makefile2 all
+make -f src/CMakeFiles/libcmark.dir/build.make src/CMakeFiles/libcmark.dir/depend
+make -f src/CMakeFiles/libcmark_static.dir/build.make src/CMakeFiles/libcmark_static.dir/depend
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/control/mount/test/cmark /home/control/mount/test/cmark/src /home/control/mount/test/cmark/obj-arm-linux-gnueabihf /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src/CMakeFiles/libcmark_static.dir/DependInfo.cmake --color=
+Scanning dependencies of target libcmark_static
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make -f src/CMakeFiles/libcmark_static.dir/build.make src/CMakeFiles/libcmark_static.dir/build
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/control/mount/test/cmark /home/control/mount/test/cmark/src /home/control/mount/test/cmark/obj-arm-linux-gnueabihf /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src/CMakeFiles/libcmark.dir/DependInfo.cmake --color=
+Scanning dependencies of target libcmark
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make -f src/CMakeFiles/libcmark.dir/build.make src/CMakeFiles/libcmark.dir/build
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[  6%] Building C object src/CMakeFiles/libcmark.dir/cmark.c.o
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src && /usr/bin/cc -Dlibcmark_EXPORTS -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src -I/home/control/mount/test/cmark/src  -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -fvisibility=hidden   -Wall -Wextra -pedantic -std=c99 -o CMakeFiles/libcmark.dir/cmark.c.o   -c /home/control/mount/test/cmark/src/cmark.c
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[  4%] Building C object src/CMakeFiles/libcmark_static.dir/cmark.c.o
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src && /usr/bin/cc  -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src -I/home/control/mount/test/cmark/src  -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -fvisibility=hidden   -DCMARK_STATIC_DEFINE -Wall -Wextra -pedantic -std=c99 -o CMakeFiles/libcmark_static.dir/cmark.c.o   -c /home/control/mount/test/cmark/src/cmark.c
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 10%] Building C object src/CMakeFiles/libcmark.dir/iterator.c.o
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src && /usr/bin/cc -Dlibcmark_EXPORTS -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src -I/home/control/mount/test/cmark/src  -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -fvisibility=hidden   -Wall -Wextra -pedantic -std=c99 -o CMakeFiles/libcmark.dir/iterator.c.o   -c /home/control/mount/test/cmark/src/iterator.c
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 13%] Building C object src/CMakeFiles/libcmark_static.dir/iterator.c.o
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src && /usr/bin/cc  -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src -I/home/control/mount/test/cmark/src  -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -fvisibility=hidden   -DCMARK_STATIC_DEFINE -Wall -Wextra -pedantic -std=c99 -o CMakeFiles/libcmark_static.dir/iterator.c.o   -c /home/control/mount/test/cmark/src/iterator.c
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[  8%] Building C object src/CMakeFiles/libcmark_static.dir/node.c.o
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src && /usr/bin/cc  -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src -I/home/control/mount/test/cmark/src  -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -fvisibility=hidden   -DCMARK_STATIC_DEFINE -Wall -Wextra -pedantic -std=c99 -o CMakeFiles/libcmark_static.dir/node.c.o   -c /home/control/mount/test/cmark/src/node.c
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[  4%] Building C object src/CMakeFiles/libcmark.dir/node.c.o
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src && /usr/bin/cc -Dlibcmark_EXPORTS -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src -I/home/control/mount/test/cmark/src  -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -fvisibility=hidden   -Wall -Wextra -pedantic -std=c99 -o CMakeFiles/libcmark.dir/node.c.o   -c /home/control/mount/test/cmark/src/node.c
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 15%] Building C object src/CMakeFiles/libcmark_static.dir/blocks.c.o
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src && /usr/bin/cc  -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src -I/home/control/mount/test/cmark/src  -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -fvisibility=hidden   -DCMARK_STATIC_DEFINE -Wall -Wextra -pedantic -std=c99 -o CMakeFiles/libcmark_static.dir/blocks.c.o   -c /home/control/mount/test/cmark/src/blocks.c
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 21%] Building C object src/CMakeFiles/libcmark.dir/blocks.c.o
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src && /usr/bin/cc -Dlibcmark_EXPORTS -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src -I/home/control/mount/test/cmark/src  -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -fvisibility=hidden   -Wall -Wextra -pedantic -std=c99 -o CMakeFiles/libcmark.dir/blocks.c.o   -c /home/control/mount/test/cmark/src/blocks.c
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 17%] Building C object src/CMakeFiles/libcmark_static.dir/inlines.c.o
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src && /usr/bin/cc  -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src -I/home/control/mount/test/cmark/src  -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -fvisibility=hidden   -DCMARK_STATIC_DEFINE -Wall -Wextra -pedantic -std=c99 -o CMakeFiles/libcmark_static.dir/inlines.c.o   -c /home/control/mount/test/cmark/src/inlines.c
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 28%] Building C object src/CMakeFiles/libcmark_static.dir/buffer.c.o
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src && /usr/bin/cc  -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src -I/home/control/mount/test/cmark/src  -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -fvisibility=hidden   -DCMARK_STATIC_DEFINE -Wall -Wextra -pedantic -std=c99 -o CMakeFiles/libcmark_static.dir/buffer.c.o   -c /home/control/mount/test/cmark/src/buffer.c
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 26%] Building C object src/CMakeFiles/libcmark.dir/inlines.c.o
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src && /usr/bin/cc -Dlibcmark_EXPORTS -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src -I/home/control/mount/test/cmark/src  -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -fvisibility=hidden   -Wall -Wextra -pedantic -std=c99 -o CMakeFiles/libcmark.dir/inlines.c.o   -c /home/control/mount/test/cmark/src/inlines.c
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 32%] Building C object src/CMakeFiles/libcmark_static.dir/references.c.o
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src && /usr/bin/cc  -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src -I/home/control/mount/test/cmark/src  -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -fvisibility=hidden   -DCMARK_STATIC_DEFINE -Wall -Wextra -pedantic -std=c99 -o CMakeFiles/libcmark_static.dir/references.c.o   -c /home/control/mount/test/cmark/src/references.c
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 19%] Building C object src/CMakeFiles/libcmark_static.dir/scanners.c.o
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src && /usr/bin/cc  -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src -I/home/control/mount/test/cmark/src  -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -fvisibility=hidden   -DCMARK_STATIC_DEFINE -Wall -Wextra -pedantic -std=c99 -o CMakeFiles/libcmark_static.dir/scanners.c.o   -c /home/control/mount/test/cmark/src/scanners.c
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 36%] Building C object src/CMakeFiles/libcmark.dir/buffer.c.o
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src && /usr/bin/cc -Dlibcmark_EXPORTS -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src -I/home/control/mount/test/cmark/src  -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -fvisibility=hidden   -Wall -Wextra -pedantic -std=c99 -o CMakeFiles/libcmark.dir/buffer.c.o   -c /home/control/mount/test/cmark/src/buffer.c
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 23%] Building C object src/CMakeFiles/libcmark_static.dir/utf8.c.o
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src && /usr/bin/cc  -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src -I/home/control/mount/test/cmark/src  -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -fvisibility=hidden   -DCMARK_STATIC_DEFINE -Wall -Wextra -pedantic -std=c99 -o CMakeFiles/libcmark_static.dir/utf8.c.o   -c /home/control/mount/test/cmark/src/utf8.c
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 39%] Building C object src/CMakeFiles/libcmark.dir/references.c.o
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src && /usr/bin/cc -Dlibcmark_EXPORTS -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src -I/home/control/mount/test/cmark/src  -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -fvisibility=hidden   -Wall -Wextra -pedantic -std=c99 -o CMakeFiles/libcmark.dir/references.c.o   -c /home/control/mount/test/cmark/src/references.c
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 41%] Building C object src/CMakeFiles/libcmark_static.dir/render.c.o
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src && /usr/bin/cc  -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src -I/home/control/mount/test/cmark/src  -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -fvisibility=hidden   -DCMARK_STATIC_DEFINE -Wall -Wextra -pedantic -std=c99 -o CMakeFiles/libcmark_static.dir/render.c.o   -c /home/control/mount/test/cmark/src/render.c
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 43%] Building C object src/CMakeFiles/libcmark.dir/render.c.o
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src && /usr/bin/cc -Dlibcmark_EXPORTS -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src -I/home/control/mount/test/cmark/src  -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -fvisibility=hidden   -Wall -Wextra -pedantic -std=c99 -o CMakeFiles/libcmark.dir/render.c.o   -c /home/control/mount/test/cmark/src/render.c
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 45%] Building C object src/CMakeFiles/libcmark_static.dir/man.c.o
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src && /usr/bin/cc  -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src -I/home/control/mount/test/cmark/src  -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -fvisibility=hidden   -DCMARK_STATIC_DEFINE -Wall -Wextra -pedantic -std=c99 -o CMakeFiles/libcmark_static.dir/man.c.o   -c /home/control/mount/test/cmark/src/man.c
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 47%] Building C object src/CMakeFiles/libcmark.dir/man.c.o
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src && /usr/bin/cc -Dlibcmark_EXPORTS -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src -I/home/control/mount/test/cmark/src  -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -fvisibility=hidden   -Wall -Wextra -pedantic -std=c99 -o CMakeFiles/libcmark.dir/man.c.o   -c /home/control/mount/test/cmark/src/man.c
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 50%] Building C object src/CMakeFiles/libcmark_static.dir/xml.c.o
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src && /usr/bin/cc  -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src -I/home/control/mount/test/cmark/src  -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -fvisibility=hidden   -DCMARK_STATIC_DEFINE -Wall -Wextra -pedantic -std=c99 -o CMakeFiles/libcmark_static.dir/xml.c.o   -c /home/control/mount/test/cmark/src/xml.c
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 52%] Building C object src/CMakeFiles/libcmark.dir/xml.c.o
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src && /usr/bin/cc -Dlibcmark_EXPORTS -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src -I/home/control/mount/test/cmark/src  -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -fvisibility=hidden   -Wall -Wextra -pedantic -std=c99 -o CMakeFiles/libcmark.dir/xml.c.o   -c /home/control/mount/test/cmark/src/xml.c
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 54%] Building C object src/CMakeFiles/libcmark_static.dir/html.c.o
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src && /usr/bin/cc  -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src -I/home/control/mount/test/cmark/src  -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -fvisibility=hidden   -DCMARK_STATIC_DEFINE -Wall -Wextra -pedantic -std=c99 -o CMakeFiles/libcmark_static.dir/html.c.o   -c /home/control/mount/test/cmark/src/html.c
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 30%] Building C object src/CMakeFiles/libcmark.dir/scanners.c.o
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src && /usr/bin/cc -Dlibcmark_EXPORTS -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src -I/home/control/mount/test/cmark/src  -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -fvisibility=hidden   -Wall -Wextra -pedantic -std=c99 -o CMakeFiles/libcmark.dir/scanners.c.o   -c /home/control/mount/test/cmark/src/scanners.c
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 56%] Building C object src/CMakeFiles/libcmark.dir/html.c.o
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src && /usr/bin/cc -Dlibcmark_EXPORTS -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src -I/home/control/mount/test/cmark/src  -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -fvisibility=hidden   -Wall -Wextra -pedantic -std=c99 -o CMakeFiles/libcmark.dir/html.c.o   -c /home/control/mount/test/cmark/src/html.c
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 58%] Building C object src/CMakeFiles/libcmark_static.dir/commonmark.c.o
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src && /usr/bin/cc  -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src -I/home/control/mount/test/cmark/src  -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -fvisibility=hidden   -DCMARK_STATIC_DEFINE -Wall -Wextra -pedantic -std=c99 -o CMakeFiles/libcmark_static.dir/commonmark.c.o   -c /home/control/mount/test/cmark/src/commonmark.c
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 60%] Building C object src/CMakeFiles/libcmark.dir/commonmark.c.o
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src && /usr/bin/cc -Dlibcmark_EXPORTS -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src -I/home/control/mount/test/cmark/src  -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -fvisibility=hidden   -Wall -Wextra -pedantic -std=c99 -o CMakeFiles/libcmark.dir/commonmark.c.o   -c /home/control/mount/test/cmark/src/commonmark.c
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 63%] Building C object src/CMakeFiles/libcmark.dir/latex.c.o
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src && /usr/bin/cc -Dlibcmark_EXPORTS -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src -I/home/control/mount/test/cmark/src  -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -fvisibility=hidden   -Wall -Wextra -pedantic -std=c99 -o CMakeFiles/libcmark.dir/latex.c.o   -c /home/control/mount/test/cmark/src/latex.c
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 67%] Building C object src/CMakeFiles/libcmark.dir/houdini_href_e.c.o
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src && /usr/bin/cc -Dlibcmark_EXPORTS -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src -I/home/control/mount/test/cmark/src  -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -fvisibility=hidden   -Wall -Wextra -pedantic -std=c99 -o CMakeFiles/libcmark.dir/houdini_href_e.c.o   -c /home/control/mount/test/cmark/src/houdini_href_e.c
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 69%] Building C object src/CMakeFiles/libcmark.dir/houdini_html_e.c.o
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src && /usr/bin/cc -Dlibcmark_EXPORTS -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src -I/home/control/mount/test/cmark/src  -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -fvisibility=hidden   -Wall -Wextra -pedantic -std=c99 -o CMakeFiles/libcmark.dir/houdini_html_e.c.o   -c /home/control/mount/test/cmark/src/houdini_html_e.c
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 73%] Building C object src/CMakeFiles/libcmark.dir/cmark_ctype.c.o
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src && /usr/bin/cc -Dlibcmark_EXPORTS -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src -I/home/control/mount/test/cmark/src  -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -fvisibility=hidden   -Wall -Wextra -pedantic -std=c99 -o CMakeFiles/libcmark.dir/cmark_ctype.c.o   -c /home/control/mount/test/cmark/src/cmark_ctype.c
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 34%] Building C object src/CMakeFiles/libcmark.dir/utf8.c.o
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src && /usr/bin/cc -Dlibcmark_EXPORTS -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src -I/home/control/mount/test/cmark/src  -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -fvisibility=hidden   -Wall -Wextra -pedantic -std=c99 -o CMakeFiles/libcmark.dir/utf8.c.o   -c /home/control/mount/test/cmark/src/utf8.c
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 65%] Building C object src/CMakeFiles/libcmark_static.dir/latex.c.o
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src && /usr/bin/cc  -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src -I/home/control/mount/test/cmark/src  -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -fvisibility=hidden   -DCMARK_STATIC_DEFINE -Wall -Wextra -pedantic -std=c99 -o CMakeFiles/libcmark_static.dir/latex.c.o   -c /home/control/mount/test/cmark/src/latex.c
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 76%] Building C object src/CMakeFiles/libcmark_static.dir/houdini_href_e.c.o
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src && /usr/bin/cc  -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src -I/home/control/mount/test/cmark/src  -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -fvisibility=hidden   -DCMARK_STATIC_DEFINE -Wall -Wextra -pedantic -std=c99 -o CMakeFiles/libcmark_static.dir/houdini_href_e.c.o   -c /home/control/mount/test/cmark/src/houdini_href_e.c
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 78%] Building C object src/CMakeFiles/libcmark_static.dir/houdini_html_e.c.o
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src && /usr/bin/cc  -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src -I/home/control/mount/test/cmark/src  -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -fvisibility=hidden   -DCMARK_STATIC_DEFINE -Wall -Wextra -pedantic -std=c99 -o CMakeFiles/libcmark_static.dir/houdini_html_e.c.o   -c /home/control/mount/test/cmark/src/houdini_html_e.c
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 71%] Building C object src/CMakeFiles/libcmark.dir/houdini_html_u.c.o
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src && /usr/bin/cc -Dlibcmark_EXPORTS -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src -I/home/control/mount/test/cmark/src  -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -fvisibility=hidden   -Wall -Wextra -pedantic -std=c99 -o CMakeFiles/libcmark.dir/houdini_html_u.c.o   -c /home/control/mount/test/cmark/src/houdini_html_u.c
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 82%] Building C object src/CMakeFiles/libcmark_static.dir/cmark_ctype.c.o
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src && /usr/bin/cc  -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src -I/home/control/mount/test/cmark/src  -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -fvisibility=hidden   -DCMARK_STATIC_DEFINE -Wall -Wextra -pedantic -std=c99 -o CMakeFiles/libcmark_static.dir/cmark_ctype.c.o   -c /home/control/mount/test/cmark/src/cmark_ctype.c
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 84%] Linking C shared library libcmark.so
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src && /usr/bin/cmake -E cmake_link_script CMakeFiles/libcmark.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -Wl,-Bsymbolic-functions -Wl,-z,relro -shared -Wl,-soname,libcmark.so.0.29.0 -o libcmark.so.0.29.0 CMakeFiles/libcmark.dir/cmark.c.o CMakeFiles/libcmark.dir/node.c.o CMakeFiles/libcmark.dir/iterator.c.o CMakeFiles/libcmark.dir/blocks.c.o CMakeFiles/libcmark.dir/inlines.c.o CMakeFiles/libcmark.dir/scanners.c.o CMakeFiles/libcmark.dir/utf8.c.o CMakeFiles/libcmark.dir/buffer.c.o CMakeFiles/libcmark.dir/references.c.o CMakeFiles/libcmark.dir/render.c.o CMakeFiles/libcmark.dir/man.c.o CMakeFiles/libcmark.dir/xml.c.o CMakeFiles/libcmark.dir/html.c.o CMakeFiles/libcmark.dir/commonmark.c.o CMakeFiles/libcmark.dir/latex.c.o CMakeFiles/libcmark.dir/houdini_href_e.c.o CMakeFiles/libcmark.dir/houdini_html_e.c.o CMakeFiles/libcmark.dir/houdini_html_u.c.o CMakeFiles/libcmark.dir/cmark_ctype.c.o 
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src && /usr/bin/cmake -E cmake_symlink_library libcmark.so.0.29.0 libcmark.so.0.29.0 libcmark.so
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[2]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 84%] Built target libcmark
+make[2]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make -f api_test/CMakeFiles/api_test.dir/build.make api_test/CMakeFiles/api_test.dir/depend
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 80%] Building C object src/CMakeFiles/libcmark_static.dir/houdini_html_u.c.o
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src && /usr/bin/cc  -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src -I/home/control/mount/test/cmark/src  -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -fvisibility=hidden   -DCMARK_STATIC_DEFINE -Wall -Wextra -pedantic -std=c99 -o CMakeFiles/libcmark_static.dir/houdini_html_u.c.o   -c /home/control/mount/test/cmark/src/houdini_html_u.c
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/control/mount/test/cmark /home/control/mount/test/cmark/api_test /home/control/mount/test/cmark/obj-arm-linux-gnueabihf /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/api_test /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/api_test/CMakeFiles/api_test.dir/DependInfo.cmake --color=
+Scanning dependencies of target api_test
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make -f api_test/CMakeFiles/api_test.dir/build.make api_test/CMakeFiles/api_test.dir/build
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 86%] Linking C static library libcmark.a
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src && /usr/bin/cmake -P CMakeFiles/libcmark_static.dir/cmake_clean_target.cmake
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src && /usr/bin/cmake -E cmake_link_script CMakeFiles/libcmark_static.dir/link.txt --verbose=1
+/usr/bin/ar qc libcmark.a  CMakeFiles/libcmark_static.dir/cmark.c.o CMakeFiles/libcmark_static.dir/node.c.o CMakeFiles/libcmark_static.dir/iterator.c.o CMakeFiles/libcmark_static.dir/blocks.c.o CMakeFiles/libcmark_static.dir/inlines.c.o CMakeFiles/libcmark_static.dir/scanners.c.o CMakeFiles/libcmark_static.dir/utf8.c.o CMakeFiles/libcmark_static.dir/buffer.c.o CMakeFiles/libcmark_static.dir/references.c.o CMakeFiles/libcmark_static.dir/render.c.o CMakeFiles/libcmark_static.dir/man.c.o CMakeFiles/libcmark_static.dir/xml.c.o CMakeFiles/libcmark_static.dir/html.c.o CMakeFiles/libcmark_static.dir/commonmark.c.o CMakeFiles/libcmark_static.dir/latex.c.o CMakeFiles/libcmark_static.dir/houdini_href_e.c.o CMakeFiles/libcmark_static.dir/houdini_html_e.c.o CMakeFiles/libcmark_static.dir/houdini_html_u.c.o CMakeFiles/libcmark_static.dir/cmark_ctype.c.o
+/usr/bin/ranlib libcmark.a
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[2]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 93%] Built target libcmark_static
+make[2]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make -f src/CMakeFiles/cmark.dir/build.make src/CMakeFiles/cmark.dir/depend
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 93%] Building CXX object api_test/CMakeFiles/api_test.dir/cplusplus.cpp.o
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/api_test && /usr/bin/c++   -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/api_test -I/home/control/mount/test/cmark/api_test -I/home/control/mount/test/cmark/src -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src  -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2   -o CMakeFiles/api_test.dir/cplusplus.cpp.o -c /home/control/mount/test/cmark/api_test/cplusplus.cpp
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 93%] Building C object api_test/CMakeFiles/api_test.dir/harness.c.o
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/api_test && /usr/bin/cc  -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/api_test -I/home/control/mount/test/cmark/api_test -I/home/control/mount/test/cmark/src -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src  -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2   -Wall -Wextra -pedantic -std=c99 -o CMakeFiles/api_test.dir/harness.c.o   -c /home/control/mount/test/cmark/api_test/harness.c
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/control/mount/test/cmark /home/control/mount/test/cmark/src /home/control/mount/test/cmark/obj-arm-linux-gnueabihf /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src/CMakeFiles/cmark.dir/DependInfo.cmake --color=
+Scanning dependencies of target cmark
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make -f src/CMakeFiles/cmark.dir/build.make src/CMakeFiles/cmark.dir/build
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 95%] Building C object src/CMakeFiles/cmark.dir/main.c.o
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src && /usr/bin/cc  -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src -I/home/control/mount/test/cmark/src  -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2   -DCMARK_STATIC_DEFINE -Wall -Wextra -pedantic -std=c99 -o CMakeFiles/cmark.dir/main.c.o   -c /home/control/mount/test/cmark/src/main.c
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 97%] Linking C executable cmark
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src && /usr/bin/cmake -E cmake_link_script CMakeFiles/cmark.dir/link.txt --verbose=1
+/usr/bin/cc -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -Wl,-Bsymbolic-functions -Wl,-z,relro CMakeFiles/cmark.dir/main.c.o  -o cmark libcmark.a 
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[2]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 97%] Built target cmark
+make[2]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 93%] Building C object api_test/CMakeFiles/api_test.dir/main.c.o
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/api_test && /usr/bin/cc  -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/api_test -I/home/control/mount/test/cmark/api_test -I/home/control/mount/test/cmark/src -I/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src  -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2   -Wall -Wextra -pedantic -std=c99 -o CMakeFiles/api_test.dir/main.c.o   -c /home/control/mount/test/cmark/api_test/main.c
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[100%] Linking CXX executable api_test
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/api_test && /usr/bin/cmake -E cmake_link_script CMakeFiles/api_test.dir/link.txt --verbose=1
+/usr/bin/c++  -g -O2 -fdebug-prefix-map=/home/control/mount/test/cmark=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -Wl,-Bsymbolic-functions -Wl,-z,relro -rdynamic CMakeFiles/api_test.dir/cplusplus.cpp.o CMakeFiles/api_test.dir/harness.c.o CMakeFiles/api_test.dir/main.c.o  -o api_test -Wl,-rpath,/home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src ../src/libcmark.so.0.29.0 
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[2]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[100%] Built target api_test
+make[2]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[1]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+/usr/bin/cmake -E cmake_progress_start /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/CMakeFiles 0
+make[1]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+   dh_auto_test -O--buildsystem=cmake
+	cd obj-arm-linux-gnueabihf && make -j4 -O test ARGS\+=-j4
+make[1]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+Running tests...
+/usr/bin/ctest --force-new-ctest-process -j4
+Test project /home/control/mount/test/cmark/obj-arm-linux-gnueabihf
+    Start 1: api_test
+    Start 2: html_normalization
+    Start 3: spectest_library
+    Start 4: pathological_tests_library
+1/9 Test #1: api_test .........................   Passed    0.02 sec
+    Start 5: roundtriptest_library
+2/9 Test #2: html_normalization ...............   Passed    0.42 sec
+3/9 Test #3: spectest_library .................   Passed    0.43 sec
+    Start 6: entity_library
+    Start 7: spectest_executable
+4/9 Test #6: entity_library ...................   Passed    0.61 sec
+    Start 8: smartpuncttest_executable
+5/9 Test #8: smartpuncttest_executable ........   Passed    0.60 sec
+    Start 9: regressiontest_executable
+6/9 Test #5: roundtriptest_library ............   Passed    1.68 sec
+7/9 Test #9: regressiontest_executable ........   Passed    0.44 sec
+8/9 Test #7: spectest_executable ..............   Passed    3.36 sec
+9/9 Test #4: pathological_tests_library .......   Passed    4.73 sec
+
+100% tests passed, 0 tests failed out of 9
+
+Total Test time (real) =   4.75 sec
+make[1]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+   create-stamp debian/debhelper-build-stamp
+   dh_testroot -O--buildsystem=cmake
+   dh_prep -O--buildsystem=cmake
+   debian/rules override_dh_auto_install
+make[1]: Entering directory '/home/control/mount/test/cmark'
+dh_auto_install -- \
+INSTALL_PREFIX=/usr
+	cd obj-arm-linux-gnueabihf && make -j4 -O install DESTDIR=/home/control/mount/test/cmark/debian/tmp AM_UPDATE_INFO_DIR=no INSTALL_PREFIX=/usr
+make[2]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+/usr/bin/cmake -H/home/control/mount/test/cmark -B/home/control/mount/test/cmark/obj-arm-linux-gnueabihf --check-build-system CMakeFiles/Makefile.cmake 0
+make[2]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[2]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+/usr/bin/cmake -E cmake_progress_start /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/CMakeFiles /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/CMakeFiles/progress.marks
+make[2]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make -f CMakeFiles/Makefile2 all
+make -f src/CMakeFiles/libcmark.dir/build.make src/CMakeFiles/libcmark.dir/depend
+make -f src/CMakeFiles/libcmark_static.dir/build.make src/CMakeFiles/libcmark_static.dir/depend
+make[4]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/control/mount/test/cmark /home/control/mount/test/cmark/src /home/control/mount/test/cmark/obj-arm-linux-gnueabihf /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src/CMakeFiles/libcmark.dir/DependInfo.cmake --color=
+make[4]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[4]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/control/mount/test/cmark /home/control/mount/test/cmark/src /home/control/mount/test/cmark/obj-arm-linux-gnueabihf /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src/CMakeFiles/libcmark_static.dir/DependInfo.cmake --color=
+make[4]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make -f src/CMakeFiles/libcmark.dir/build.make src/CMakeFiles/libcmark.dir/build
+make -f src/CMakeFiles/libcmark_static.dir/build.make src/CMakeFiles/libcmark_static.dir/build
+make[4]: Nothing to be done for 'src/CMakeFiles/libcmark.dir/build'.
+make[4]: Nothing to be done for 'src/CMakeFiles/libcmark_static.dir/build'.
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 86%] Built target libcmark
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 86%] Built target libcmark_static
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make -f src/CMakeFiles/cmark.dir/build.make src/CMakeFiles/cmark.dir/depend
+make -f api_test/CMakeFiles/api_test.dir/build.make api_test/CMakeFiles/api_test.dir/depend
+make[4]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/control/mount/test/cmark /home/control/mount/test/cmark/api_test /home/control/mount/test/cmark/obj-arm-linux-gnueabihf /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/api_test /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/api_test/CMakeFiles/api_test.dir/DependInfo.cmake --color=
+make[4]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[4]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+cd /home/control/mount/test/cmark/obj-arm-linux-gnueabihf && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/control/mount/test/cmark /home/control/mount/test/cmark/src /home/control/mount/test/cmark/obj-arm-linux-gnueabihf /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/src/CMakeFiles/cmark.dir/DependInfo.cmake --color=
+make[4]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make -f api_test/CMakeFiles/api_test.dir/build.make api_test/CMakeFiles/api_test.dir/build
+make -f src/CMakeFiles/cmark.dir/build.make src/CMakeFiles/cmark.dir/build
+make[4]: Nothing to be done for 'src/CMakeFiles/cmark.dir/build'.
+make[4]: Nothing to be done for 'api_test/CMakeFiles/api_test.dir/build'.
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[ 97%] Built target cmark
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[3]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+[100%] Built target api_test
+make[3]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[2]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+/usr/bin/cmake -E cmake_progress_start /home/control/mount/test/cmark/obj-arm-linux-gnueabihf/CMakeFiles 0
+make[2]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make -f CMakeFiles/Makefile2 preinstall
+make[3]: Nothing to be done for 'preinstall'.
+make[2]: Entering directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+Install the project...
+/usr/bin/cmake -P cmake_install.cmake
+-- Install configuration: "None"
+-- Installing: /home/control/mount/test/cmark/debian/tmp/usr/bin/cmark
+-- Installing: /home/control/mount/test/cmark/debian/tmp/usr/lib/arm-linux-gnueabihf/libcmark.so.0.29.0
+-- Installing: /home/control/mount/test/cmark/debian/tmp/usr/lib/arm-linux-gnueabihf/libcmark.so
+-- Installing: /home/control/mount/test/cmark/debian/tmp/usr/lib/arm-linux-gnueabihf/libcmark.a
+-- Installing: /home/control/mount/test/cmark/debian/tmp/usr/lib/arm-linux-gnueabihf/pkgconfig/libcmark.pc
+-- Installing: /home/control/mount/test/cmark/debian/tmp/usr/include/cmark.h
+-- Installing: /home/control/mount/test/cmark/debian/tmp/usr/include/cmark_export.h
+-- Installing: /home/control/mount/test/cmark/debian/tmp/usr/include/cmark_version.h
+-- Installing: /home/control/mount/test/cmark/debian/tmp/usr/lib/arm-linux-gnueabihf/cmake/cmark.cmake
+-- Installing: /home/control/mount/test/cmark/debian/tmp/usr/lib/arm-linux-gnueabihf/cmake/cmark-none.cmake
+-- Installing: /home/control/mount/test/cmark/debian/tmp/usr/share/man/man1/cmark.1
+-- Installing: /home/control/mount/test/cmark/debian/tmp/usr/share/man/man3/cmark.3
+make[2]: Leaving directory '/home/control/mount/test/cmark/obj-arm-linux-gnueabihf'
+make[1]: Leaving directory '/home/control/mount/test/cmark'
+   dh_install -O--buildsystem=cmake
+   dh_installdocs -O--buildsystem=cmake
+   dh_installchangelogs -O--buildsystem=cmake
+   dh_installman -O--buildsystem=cmake
+   dh_perl -O--buildsystem=cmake
+   dh_link -O--buildsystem=cmake
+   dh_strip_nondeterminism -O--buildsystem=cmake
+   dh_compress -O--buildsystem=cmake
+   dh_fixperms -O--buildsystem=cmake
+   debian/rules override_dh_missing
+make[1]: Entering directory '/home/control/mount/test/cmark'
+dh_missing --fail-missing
+make[1]: Leaving directory '/home/control/mount/test/cmark'
+   dh_strip -O--buildsystem=cmake
+   dh_makeshlibs -O--buildsystem=cmake
+   dh_shlibdeps -O--buildsystem=cmake
+   dh_installdeb -O--buildsystem=cmake
+   dh_gencontrol -O--buildsystem=cmake
+   dh_md5sums -O--buildsystem=cmake
+   dh_builddeb -O--buildsystem=cmake
+dpkg-deb: building package 'libcmark0.29.0' in '../libcmark0.29.0_0.29.0-1ubuntu2_armhf.deb'.
+dpkg-deb: building package 'cmark' in '../cmark_0.29.0-1ubuntu2_armhf.deb'.
+dpkg-deb: building package 'libcmark-dev' in '../libcmark-dev_0.29.0-1ubuntu2_armhf.deb'.
+dpkg-deb: building package 'cmark-dbgsym' in 'debian/.debhelper/scratch-space/build-cmark/cmark-dbgsym_0.29.0-1ubuntu2_armhf.deb'.
+dpkg-deb: building package 'libcmark0.29.0-dbgsym' in 'debian/.debhelper/scratch-space/build-libcmark0.29.0/libcmark0.29.0-dbgsym_0.29.0-1ubuntu2_armhf.deb'.
+	Renaming cmark-dbgsym_0.29.0-1ubuntu2_armhf.deb to cmark-dbgsym_0.29.0-1ubuntu2_armhf.ddeb
+	Renaming libcmark0.29.0-dbgsym_0.29.0-1ubuntu2_armhf.deb to libcmark0.29.0-dbgsym_0.29.0-1ubuntu2_armhf.ddeb
+dpkg-source: 資訊: using options from cmark/debian/source/options: --extend-diff-ignore=__pycache__
+dpkg-source: 資訊: unapplying 1001_multiarch.patch
+dpkg-buildpackage: 資訊: binary-only upload (no source included)

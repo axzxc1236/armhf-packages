@@ -1,0 +1,37 @@
+Format: 1.8
+Date: Sun, 26 Jan 2020 14:45:13 +0100
+Source: mkvtoolnix
+Binary: mkvtoolnix mkvtoolnix-gui mkvtoolnix-dbg mkvtoolnix-gui-dbg
+Architecture: armhf
+Version: 43.0.0-0~bunkus01
+Distribution: eoan
+Urgency: low
+Maintainer: Moritz Bunkus <moritz@bunkus.org>
+Changed-By: Moritz Bunkus <moritz@bunkus.org>
+Description:
+ mkvtoolnix - Set of command-line tools to work with Matroska files
+ mkvtoolnix-dbg - debugging symbols for mkvtoolnix
+ mkvtoolnix-gui - Set of tools to work with Matroska files - GUI frontend
+ mkvtoolnix-gui-dbg - debugging symbols for mkvtoolnix-gui
+Changes:
+ mkvtoolnix (43.0.0-0~bunkus01) eoan; urgency=low
+ .
+   * New version.
+Checksums-Sha1:
+ af017138e0fcf2c4865145f48156ba0d6c6fb736 123271088 mkvtoolnix-dbg_43.0.0-0~bunkus01_armhf.deb
+ 57325bb7b33ea58f8c0dcc96e6cfcbb9782fbdbb 63596080 mkvtoolnix-gui-dbg_43.0.0-0~bunkus01_armhf.deb
+ 8c0c3335c8a294c25035d0a9dba48d6e21844d93 3000224 mkvtoolnix-gui_43.0.0-0~bunkus01_armhf.deb
+ a350b8ada7d187ca6cda59032a5ada245dcb3cf8 15714 mkvtoolnix_43.0.0-0~bunkus01_armhf.buildinfo
+ 05086dda5e039ae9d5ab2b51fc322d248cc871b9 3646936 mkvtoolnix_43.0.0-0~bunkus01_armhf.deb
+Checksums-Sha256:
+ e1da48d995c97d46b334c27906f134e366530072b745d0522f5de353b858e6c0 123271088 mkvtoolnix-dbg_43.0.0-0~bunkus01_armhf.deb
+ 43a18ef0fd817f0a6e84e9170fc02e95bdbcda6cda54acc1208e5e5ff1596e8b 63596080 mkvtoolnix-gui-dbg_43.0.0-0~bunkus01_armhf.deb
+ f7219e06ad3a9653b8953c9c2290f9ca93ac0cf5839f1905c233059f151cbbef 3000224 mkvtoolnix-gui_43.0.0-0~bunkus01_armhf.deb
+ 5ce967468970f73cb9d708343dae118fddbcea5804782777c36f272522bbc912 15714 mkvtoolnix_43.0.0-0~bunkus01_armhf.buildinfo
+ 3b0810d0aa33ef26ae58c1b6c8893c5d55c80500e26653858dd4f10046edae11 3646936 mkvtoolnix_43.0.0-0~bunkus01_armhf.deb
+Files:
+ 9a56231599215a54a6f1e64f4922bfde 123271088 debug extra mkvtoolnix-dbg_43.0.0-0~bunkus01_armhf.deb
+ 45edb43a93839445bb36c5fdd7e2bf58 63596080 debug extra mkvtoolnix-gui-dbg_43.0.0-0~bunkus01_armhf.deb
+ cc0f1b957519f1eea64760f353f58e03 3000224 video optional mkvtoolnix-gui_43.0.0-0~bunkus01_armhf.deb
+ 39acb46c3de2d5a72eec725f6ef29eb3 15714 video optional mkvtoolnix_43.0.0-0~bunkus01_armhf.buildinfo
+ 539a7704c44b8dc08c0a7b42e36bb01c 3646936 video optional mkvtoolnix_43.0.0-0~bunkus01_armhf.deb
